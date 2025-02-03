@@ -1142,7 +1142,8 @@ img.displayslide {
 
 .galeria__legendas {
   margin-top: 10px;
-  text-align: left; 
+  text-align: left;
+  font-size: 0.9rem;
 }
 
 .galeria__foto:nth-child(2n) {
@@ -1303,6 +1304,11 @@ img.displayslide {
 /* 1. Página Principal */
 
 @media (max-width: 960px) {
+
+  .botoes_assembleias_anteriores {
+   padding-left: 1rem; 
+  }
+
   .cards__section {
     padding: 0.5rem;
   }
