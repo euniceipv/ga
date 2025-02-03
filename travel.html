@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Get Here</title>
+    <meta name="author" content="Hexapaciência, Paixão, Diana Martins, Gabriela Mota, Pedro Pereira, Ricardo Vidal, Rui César">
+    <meta name="description" content="Website created to promote Eunice's General Assembly, taking place at the Polytechnic Institute of Viseu.">
+    <meta name="keywords" content="Eunice, General Assembly, Polytechnic Institute of Viseu, Assembly promotion, Viseu events, Polytechnic Institute events">
+    <link rel="icon" type="image/x-icon" href="img/icon/favicon.png"> <!--icon-->
+
+    <link rel="stylesheet" href="CSS/styles.css"> <!--CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <script src="Js/jsmain.js" defer></script> <!--JAVA-->
+</head>
+
+<body class="container__principal">
+    
+     <!-- ======================================= HEADER MENU  ===================================== -->
+
+    <header>
+        <nav class="menu">
+            <a href="index.html"><img class="menu__logosEunice" src="img/icon/GA25.png" alt="Logos Eunice"></a>
+            <div class="menu-mobile">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-btn"></label>
+
+                <ul class="menu-dropdown">
+                    <li><a href="index.html#programme">Programme</a></li>
+                    <li><a href="travel.html">Travel</a></li>
+                    <li><a href="viseu.html">Visit Viseu</a></li>
+                    <li><a href="previous.html">Previous Assemblies</a></li>
+                    <li><a href="#">Language</a></li>
+                </ul>
+            </div>
+            <ul class="menu__ul">
+                <li class="menu__li"><a class="menu__pages menu__pages-hover" href="index.html#programme">Programme</a></li>
+                <li class="menu__li"><a class="menu__pages menu__pages-visited" href="travel.html">Travel</a></li>
+                <li class="menu__li"><a class="menu__pages menu__pages-hover" href="viseu.html">Visit Viseu</a></li>
+                <li class="menu__li"><a class="menu__pages menu__pages-hover" href="previous.html">Previous Assemblies</a></li>
+                <li class="menu__li"><img src="img/icon/flagsuk.png" alt="Ícone das Bandeiras"></li>
+                
+            </ul>
+        </nav>
+        <img class="imagem-responsiva" src="img/travel/airport_wide.jpg" alt="Airport arrivals">
+    </header>
+
+     <!-- ======================================= BACK CONTAINER ===================================== -->
+
+    <div class="back__container">
+        <a href="index.html"><i class="fas fa-arrow-left"></i></a>  <!--fas é o símbolo-->
+        <h2 class="titulo__principal">How To Get Here</h2>
+    </div>
+
+     <!-- ======================================= Parágrafo Principal ===================================== -->
+
+    <!-- <p class="paragrafo__principal-Comum"></p> -->
+
+         <!-- ======================================= MENU ACORDEON ===================================== -->
+
+    <!-- Secção do acordeão -->
+    <section class="rotas">
+        <h2 class="rotas__title">From Porto to Viseu</h2>
+        <p class="rotas__subtitle">Starting from <a href="https://www.portoairport.pt/en/opo/access-parking/getting-to-and-from-the-airport/public-transportation">Oporto Airport</a></p>
+
+        <div class="accordion">
+            <!-- Primeiro item do acordeão -->
+            <div class="accordion__item">
+                <button class="accordion__button">
+                    <span class="accordion__header">
+                        <strong>Option 1: Direct Bus</strong>
+                        <span class="accordion__duration">Duration: 2h30</span>
+                    </span>
+                    <span class="accordion__icon">▼</span>
+                </button>
+                <div class="accordion__content">
+                    <div class="trajeto">
+                        <div class="trajeto__content">
+                            <!-- <h3 class="trajeto__title">From airport to Viseu direct by bus</h3> -->
+                            <h4 class="trajeto__subtitle"><strong>From the airport to Viseu</strong></h4>
+                            <p class="trajeto__text">Depending on the day and time you arrive at the airport, you may take a direct bus from the airport to Viseu via <a href="https://shop.global.flixbus.com/search?departureCity=76720cdd-f225-411b-88e4-389ddc37c58d&arrivalCity=219d6bc8-e9a6-4cef-a40f-20011f772c4e&_locale=en">Flixbus</a>. 
+                            Tickets can cost between 5€ and 20€.
+                            <br><br>Note: These journeys are not regular, so when you arrive at the airport this option may not be available.
+                            </p>
+                        </div>
+                        <div class="trajeto__image">
+                            <img src="img/travel/flixbus.jpg" alt="Mapa do metro">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segundo item do acordeão -->
+            <div class="accordion__item">
+                <button class="accordion__button">
+                    <span class="accordion__header">
+                        <strong>Option 2: Metro and Bus</strong>
+                        <span class="accordion__duration">Duration: approx. 3h (40 min by metro + 2h by bus)</span>
+                    </span>
+                    <span class="accordion__icon">▼</span>
+                </button>
+                <div class="accordion__content">
+                    <h4 class="trajeto__subtitle"><strong>Airport – Campanhã – Viseu</strong></h4>
+                            <p class="trajeto__text"><a href="https://en.metrodoporto.pt">Porto Metro</a> works from 6am to 1am. You can buy tickets at a vending machine. The metro journey should cost no more than €5 (single ticket).<br><br></p>   
+                    <div class="trajeto">
+                        <div class="trajeto__content">
+                            <h3 class="trajeto__title">Step 1</h3>
+                            <h4 class="trajeto__subtitle">Get to the metro station</h4>
+                            <p class="trajeto__text">Follow the signs on the airport to the metro station. There is an
+                                underground bridge that will take you the Airport metro stop.</p>
+                        </div>
+                        <div class="trajeto__image">
+                            <!-- <a href="https://maps.app.goo.gl/gCBowwU9ksf6PnY97"><img src="img/travel/portomap.png" alt="Mapa do metro"></a> -->
+                            <img src="img/travel/metroaeroportoporto.jpg" alt="Metro no Aeroporto do Porto">
+                        </div>
+                    </div>
+
+                    <div class="trajeto">
+                        <div class="trajeto__content">
+                            <h3 class="trajeto__title">Step 2</h3>
+                            <h4 class="trajeto__subtitle">Take the metro to Campanhã</h4>
+                            <p class="trajeto__text">Take the E line (purple) headed to Estádio do Dragão and get out at Campanhã.<br>
+                                </p>
+                        </div>
+                        <div class="trajeto__image">
+                            <img src="img/travel/campanha.jpg" alt="Metro do Porto">
+                        </div>
+                    </div>
+
+                    <div class="trajeto">
+                        <div class="trajeto__content">
+                            <h3 class="trajeto__title">Step 3</h3>
+                            <h4 class="trajeto__subtitle">Take a bus to Viseu</h4>
+                            <p class="trajeto__text">Leave the metro at Campanhã station, walk downstairs and go to the bus station. There is a bus leaving Campanhã to Viseu every hour. You can buy the ticket from <a href="https://rede-expressos.pt/en">Rede Expressos</a> or <a href="https://shop.global.flixbus.com/search?departureCity=74923e7b-3ace-43d2-8278-41ee00193a85&arrivalCity=219d6bc8-e9a6-4cef-a40f-20011f772c4e&_locale=en">Flixbus</a> and depending on the day, time and website you use, the ticket price can vary between €3 and €15 (single ticket).<br>
+                            If possible, choose the direct route. </p>
+                        </div>
+                        <div class="trajeto__image">
+                            <img src="img/travel/Rede-ExpressosHTGH.jpg" alt="Rede-Expressos">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Terceiro item do acordeão -->
+            <div class="accordion__item">
+                <button class="accordion__button">
+                    <span class="accordion__header">
+                        <strong>Option 3: Transfer, Uber or Taxi</strong>
+                        <span class="accordion__duration">Duration: 1h30</span>
+                    </span>
+                    <span class="accordion__icon">▼</span>
+                </button>
+                <div class="accordion__content">
+                    <div class="trajeto">
+                        <div class="trajeto__content">
+                             <h4 class="trajeto__subtitle"><strong>Transfer, Uber or Taxi</strong></h4>
+                            <p class="trajeto__text">By car, it takes around 1h30 from Oporto Airport to Viseu. A <a href="https://transvip.pt/index.html">transfer</a> costs around
+                                150€. Uber and Taxi are also options.</p>
+                        </div>
+                        <div class="trajeto__image">
+                            <img src="img/travel/transfer.jpg" alt="Serviço de Táxi">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="rotas__title"><br>From Lisbon to Viseu</h2>
+            <p class="rotas__subtitle">Starting from <a href="https://www.aeroportolisboa.pt/pt/lis/acesso-e-estacionamento/chegar-e-sair-do-aeroporto/transportes-publicos">Lisbon Airport</a></p>
+
+            <!-- Primeiro item do acordeão Lisboa -->
+            <div class="accordion__item">
+                <button class="accordion__button">
+                    <span class="accordion__header">
+                        <strong>Option 1: Bus</strong>
+                        <span class="accordion__duration">Duration: 5h</span>
+                    </span>
+                    <span class="accordion__icon">▼</span>
+                </button>
+                <div class="accordion__content">
+                    <div class="trajeto">
+                        <div class="trajeto__content">
+                            <h4 class="trajeto__subtitle"><strong>From the airport to Viseu</strong></h4>
+                            <p class="trajeto__text">Depending on the day and time you arrive at the airport, you may take a bus from the airport to Viseu via <a href="https://shop.global.flixbus.com/search?departureCity=b0b30c2e-ad59-4583-a115-c9c4c21cec16&arrivalCity=219d6bc8-e9a6-4cef-a40f-20011f772c4e&_locale=en">Flixbus</a>. 
+                            Tickets can cost between 15€ and 30€. This is not a direct route.
+                            <br><br>Note: These journeys are not regular, so when you arrive at the airport this option may not be available.
+                            </p>
+                        </div>
+                        <div class="trajeto__image">
+                            <img src="img/travel/flixbus.jpg" alt="Mapa do metro">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segundo item do acordeão Lisboa -->
+            <div class="accordion__item">
+                <button class="accordion__button">
+                    <span class="accordion__header">
+                        <strong>Option 2: Metro and Bus</strong>
+                        <span class="accordion__duration">Duration: 4h to 6h</span>
+                    </span>
+                    <span class="accordion__icon">▼</span>
+                </button>
+                <div class="accordion__content">
+                    <h4 class="trajeto__subtitle"><strong>Airport – Oriente – Viseu</strong></h4>
+                            <p class="trajeto__text"><a href="https://www.metrolisboa.pt/en/">Lisbon Metro</a> works from 6.30am to 1am. You can buy tickets at a vending machine. The metro journey should cost no more than €5 (single ticket).<br><br></p>   
+                    <div class="trajeto">
+                        <div class="trajeto__content">
+                            <h3 class="trajeto__title">Step 1</h3>
+                            <h4 class="trajeto__subtitle">Get to the metro station</h4>
+                            <p class="trajeto__text">Follow the signs on the airport to the metro station. It's on the
+                                right side of the main airport exit.</p>
+                        </div>
+                        <div class="trajeto__image">
+                            <!--<a href="https://maps.app.goo.gl/ZN128rowixUGcGFa6"><img src="img/travel/lisbonmap.png" alt="Mapa do metro"></a>-->
+                            <img src="img/travel/metroaeroportolisboa.png" alt="Mapa do metro de Lisboa">
+                        </div>
+                    </div>
+
+                    <div class="trajeto">
+                        <div class="trajeto__content">
+                            <h3 class="trajeto__title">Step 2</h3>
+                            <h4 class="trajeto__subtitle">Take the metro to Oriente Station</h4>
+                            <p class="trajeto__text">Take the red line headed to São Sebastião. Get out at Oriente (3 stops). This should take about 6 minutes.
+                                </p>
+                        </div>
+                        <div class="trajeto__image">
+                            <img src="img/travel/metrolisboa.png" alt="Mapa do metro de Lisboa">
+                        </div>
+                    </div>
+
+                    <div class="trajeto">
+                        <div class="trajeto__content">
+                            <h3 class="trajeto__title">Step 3</h3>
+                            <h4 class="trajeto__subtitle">Take a bus to Viseu</h4>
+                            <p class="trajeto__text">Leave the metro at Oriente station, walk upstairs and go to the bus
+                                station.
+                                You can buy the ticket from <a href="https://rede-expressos.pt/en">Rede Expressos</a> or <a href="https://shop.global.flixbus.com/search?departureCity=14eefc82-b630-4aea-88dc-eb91e0b9d482&arrivalCity=219d6bc8-e9a6-4cef-a40f-20011f772c4e&_locale=en">Flixbus</a> and depending on the day, time and website you use, the ticket price is around €20 (single ticket).
+                                If possible, choose the direct route.<br><br>
+                                Note: There are also buses leaving from Sete Rios station. For that option, take the same metro until S. Sebastião station and then take the blue line, direction Reboleira, and exit at Jardim Zoológico station.</p>
+                        </div>
+                        <div class="trajeto__image">
+                            <img src="img/travel/Rede-ExpressosHTGH.jpg" alt="Rede-Expressos">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Terceiro item do acordeão Lisboa -->
+            <div class="accordion__item">
+                <button class="accordion__button">
+                    <span class="accordion__header">
+                        <strong>Option 3: Transfer, Uber or Taxi</strong>
+                        <span class="accordion__duration">Duration: 3h</span>
+                    </span>
+                    <span class="accordion__icon">▼</span>
+                </button>
+                <div class="accordion__content">
+                    <div class="trajeto">
+                        <div class="trajeto__content">
+                            <h4 class="trajeto__subtitle"><strong>Transfer, Uber or Taxi</strong></h4>
+                            <p class="trajeto__text">By car, it takes around 3h from Lisbon Airport to Viseu. A <a href="https://transvip.pt/index.html">transfer</a> costs around 300€. Uber and Taxi are also options.</p>
+                        </div>
+                        <div class="trajeto__image">
+                            <img src="img/travel/transfer.jpg" alt="Serviço de Táxi">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+     <!-- ======================================= SECÇÃO CARDS ===================================== -->
+
+
+    <section id="cards-section" class="cards-section">
+
+        <article class="card">
+            <img src="img/travel/terminalviseu.jpg" alt="Viseu Transport Company Logo" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Moving in Viseu</h2>
+                <p class="card-text">When you arrive to Viseu you can move around using public transports, taxi or Uber.
+                    Viseu also has a wide cycle network and there are some bike rental options available. </p>
+                <!-- <a href="transportes.html" class="card-button">Transports</a> -->
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="img/travel/bus.jpg" alt="Imagem autocarros MUV" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">MUV Bus</h2>
+                <p class="card-text">MUV Viseu operates 29 bus routes, providing extensive public transport coverage
+                    across
+                    the city. The buses C1 and C2 run every 20 minutes and loop around the city centre, making them the
+                    best
+                    option for easy travel within Viseu's central areas.</p>
+                <a href="https://www.cm-viseu.pt/pt/areas-servicos/mobilidade-urbana-estacionamento/tarifarios-e-horarios/" target="_blank" class="card-button">Bus Fares</a>
+
+            </div>
+        </article>
+        <article class="card">
+            <img src="img/travel/busstop.jpg" alt="Imagem de paragens de autocarros" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">IPV Bus Stop</h2>
+                <p class="card-text">There are several bus stops near the Polytechnic of Viseu, providing convenient
+                    transport links to the campus and surrounding areas. These stops are served by various bus routes,
+                    including lines 10, 11, 12, 13, 19, 21, and C1. However, the "Residências IPV" stop is only served
+                    by
+                    the C1 bus.</p>
+                <a href="https://www.cm-viseu.pt/pt/areas-servicos/mobilidade-urbana-estacionamento/tarifarios-e-horarios/" target="_blank" class="card-button">Bus Schedules</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="img/travel/busstopestgv.jpg" alt="Viseu Transport Company Logo" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Bus Stops at IPV</h2>
+                <h5 class="descritivoIcon"> <img class="MapIcon" src="img/travel/A.png" alt="Map Icon">Cidade Politécnica - IPV</h5>
+                <h5 class="descritivoIcon"> <img class="MapIcon" src="img/travel/B.png" alt="Map Icon">Regimento de Infantaria 1</h5>
+                <h5 class="descritivoIcon"> <img class="MapIcon" src="img/travel/C.png" alt="Map Icon">Regimento de Infantaria 2</h5>
+                <h5 class="descritivoIcon"> <img class="MapIcon" src="img/travel/D.png" alt="Map Icon">Residências IPV</h5>
+
+
+            </div>
+        </article>
+
+        <!-- <article class="card">
+            <img src="img/travel/bikes.jpg" alt="Imagem de Bicicletas Bike Rental" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title-padding">Bike Rental</h2>
+                <p class="card-text">You can rent bikes that will help you get around Viseu, promoting environmental sustainability and healthier lifestyles.<br></p>
+                <a href="https://www.cimvdl.pt/como-funciona/" target="_blank" class="card-button">BORA!</a>
+
+            </div>
+        </article> -->
+        <article class="card">
+            <img src="img/travel/mapa.jpg" alt="Mapa de Transportes" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title-padding">Cycling Network</h2>
+                <p class="card-text">Viseu's cycle paths form a network that supports sustainable mobility across the
+                    city,
+                    connecting various areas and points of interest. The city has been investing in expanding this
+                    infrastructure, making it increasingly cyclist-friendly.</p>
+            </div>
+        </article>
+
+         <!-- ======================================= FOOTER ===================================== -->
+
+    </section>
+
+<footer class="footer">
+        <div class="padraofooter">
+            <img src="img/common/padrao.jpg" alt="Imagem do Padrão utilizado" class="padraofooter">
+        </div>
+        <div class="footeresq">
+            <a href="https://ipv.pt/en/"><img src="img/common/ipv-eunice-lockup.png" alt="logo do IPV" class="logoipvfooter"></a>
+            <ul class="listafooter">
+                <li><a href="https://eunice-university.eu/">eunice-university.eu</a></li>
+                <li><a href="mailto:eunice@sc.ipv.pt">eunice@sc.ipv.pt</a></li>
+                <li> <a href="tel:00351232480700">+351 232 480 700 (national landline)</a></li>
+                <li><a href="tel:112">Emergency Line 112</a></li>
+                <li><a href="tel:00351960054518">Pharmacy 24h</a><a href="https://maps.app.goo.gl/yUsUngKjmS7mKA6K8"
+                        target="_blank"><img class="locationIcon" src="img/icon/locationPino.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="footerdir">
+            <nav>
+                <ul class="listafooter">
+                    <li><a href="index.html#programme">Programme</a></li>
+                    <li><a href="travel.html">Travel</a></li>
+                    <li><a href="viseu.html">Visit Viseu</a></li>
+                    <li><a href="previous.html">Previous Assemblies</a></li>
+                    <li><a href="#">Language</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="socialmedia__eunice">
+            <nav>
+                <ul class="icons__social">
+                    <li class="iconAlignment"><a href="https://www.facebook.com/euniceuniversity" target="_blank"><img src="img/icon/facebook.png" alt="Facebook Eunice"></a></li>
+                    <li class="iconAlignment"><a href="https://www.instagram.com/eunice_uni_/" target="_blank"><img src="img/icon/instagram.png" alt="Instagram Eunice"></a></li>
+                    <li class="iconAlignment"><a href="https://x.com/EUNICE_uni_" target="_blank"><img src="img/icon/x.png" alt="X Eunice"></a></li>
+                    <li class="iconAlignment"><a href="https://www.linkedin.com/company/eunice-european-university"  target="_blank"><img src="img/icon/linkedin.png" alt="LinkedIn Eunice"></a></li>
+                    <li class="iconAlignment"><a href="https://www.youtube.com/channel/UCXmj6Fg2Nev0Y12MbtcvFqg" target="_blank"><img src="img/icon/youtube.png" alt="Youtube Eunice"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="developed">
+            <p><i>developed by</i> <a class="hexapaciencia" href="mailto:hexapaciencia@mail.com?subject=pedido%20de%20informacoes"><strong>&nbsp;Hexapaciência</strong></a></p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

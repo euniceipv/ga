@@ -1,0 +1,1560 @@
+/* ==========================================================================
+   Índice
+   1. Reset e Variáveis
+   2. Estilos Comuns
+   3. Componentes Partilhados (Header, Footer, Cards comuns)
+   4. Página Principal (main copy.html)
+   5. Página About Viseu (aboutviseu.html)
+   6. Página How to Get Here (howtogethere.html)
+   7. Página Previous Events (previousevents.html)
+   8. Página Transportes (transportes.html)
+   9. Media Queries
+   ========================================================================== */
+
+/* 1. Reset e Variáveis Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --cor-primaria: #000000;
+  --cor-happNow: #313131;
+  --cor-next: #7aa42d;
+  --cor-now: #d02e2e;
+  --cor-textobotao: #ffffff;
+  --cor-bgwhite: #ffffff;
+  --cor-logoEunice: #1d1d1b;
+  --cor-links-footer: #febf33; //#d3d302;
+  --cor-links-visited: #febf33; //#d3d302;
+  --cor-links-hover: #febf3380; //#d3d30280;
+  --cor-links: #0066a8;
+  --cor-border: #ecebeb;
+  --cor-dia-fundo-escuro:#888;
+}
+
+/* 2. Estilos Base */
+body {
+  font-family: montserrat, poppins, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--cor-primaria);
+}
+
+a {
+  color: var(--cor-links);
+}
+
+/* 3. Layout Principal */
+.container__principal {
+  /*padding: 0;*/
+  max-width: 64rem; /* largura do Site = 1024px */
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--cor-bgwhite);
+  font-size: 16px;
+}
+
+.imagem-responsiva {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.acrescentoImagemResponsiva {
+  padding-bottom: 3.3rem;
+}
+
+/* 4. Componentes Comuns */
+/* 4.1 Menu Principal */
+.menu {
+  position: relative;
+  background-color: var(--cor-logoEunice);
+  width: 100%;
+  height: 3.5rem;
+}
+
+.menu__logosEunice {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2rem;
+  max-width: 10rem;
+}
+
+.menu__ul {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2.5rem;
+  list-style: none;
+  margin: 0;
+}
+
+.menu__li {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.menu__pages {
+  font-size: 0.8em;
+  color: var(--cor-textobotao);
+  text-decoration: none;
+}
+
+.menu__pages-hover:hover {
+  font-weight: 500;
+  color: var(--cor-links-hover);
+}
+
+.menu__pages-visited:visited {
+  color: var(--cor-links-visited);
+}
+
+.menu__li img {
+  max-width: 1.1rem; /* Tamanho Icones Menu */
+  height: auto;
+  vertical-align: middle; /* estilo aplicado na bandeira do menu */
+}
+
+/* Menu Mobile */
+.menu-mobile {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 1.9rem;
+  height: 1.9rem;
+  text-align: center;
+  line-height: 30px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-btn::before {
+  content: "☰";
+  color: white;
+}
+
+#menu-toggle:checked + .menu-btn::before {
+  content: "×";
+}
+
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 3.5rem;
+  right: 0;
+  background-color: var(--cor-logoEunice);
+  width: 200px;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.menu-dropdown li {
+  list-style: none;
+  padding: 1rem;
+}
+
+.menu-dropdown a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.menu-dropdown a:hover {
+  color: var(--cor-links-footer);
+}
+
+/* Mostra menu quando checkbox está marcado */
+#menu-toggle:checked + .menu-btn + .menu-dropdown {
+  display: block;
+}
+
+/* Media Query */
+@media (max-width: 960px) {
+  .menu-mobile {
+    display: block; /* Aparece o menu mobile */
+  }
+
+  .menu-btn {
+    display: block; /* Aparece o botão hamburguer */
+  }
+
+  .menu__ul {
+    display: none; /* Desaparece o menu desktop */
+  }
+}
+
+/*----------------------------VOLTAR ATRÁS--------------------------*/
+
+/* Aparece em todas as páginas exceto a index.html*/
+
+.back__container {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.fa-arrow-left {
+  font-size: 1.8rem;
+  color: black;
+  border: none; /* removem uma linha misteriosa */
+  text-decoration: none;
+}
+.titulo__principal {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 0px 13px;
+}
+
+/*----------------------------PARÁGRAFO PRINCIPAL--------------------------*/
+
+.paragrafo__principal-Comum {
+  font-size: 1.1rem;
+  padding: 0.31rem 2.5rem 3.13rem 2.7rem;
+  line-height: 1.8;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--cor-logoEunice);
+  color: var(--cor-bgwhite);
+  padding: 5px 15px; /* Aqui */
+  border-radius: 0%; /* Aqui */
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px; /* Aqui */
+  display: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+#back-to-top:hover {
+  background-color: var(--cor-happNow);
+}
+
+/* 4.2 Footer */
+.footer {
+  background-color: rgb(43, 43, 43);
+  color: white;
+}
+
+.footeresq {
+  display: inline-block;
+  width: 60%;
+}
+
+.footerdir {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.padraofooter {
+  max-width: 100%;
+}
+
+.logoipvfooter {
+  width: 15rem;
+  padding: 30px 0 0 30px;
+}
+
+.listafooter {
+  padding-bottom: 1rem;
+}
+
+footer li {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  //padding: 15px 0 0 30px;
+  padding: 0.25rem 0 0 30px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+footer a:hover {
+  color: var(--cor-links-footer);
+}
+
+.social__media{  /* caixa */
+  background-color: #313131;
+}
+
+.icons__social{
+  margin-bottom: 30px;
+  padding-left: 15px;
+}
+
+.iconAlignment{             /* icones todos numa linha */
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.iconAlignment img{
+  width: 28px;
+}
+
+.developed {
+  color: white;
+  background-color: rgb(79, 79, 79);
+  font-size: 0.6rem;
+  text-align: center;
+  padding: 12px 0;
+}
+.hexapaciencia{
+  font-size: 0.7rem;
+}
+
+/*========================================================================== */
+
+/* 1. Página Principal */
+
+/*---------------------------------HERO-----------------------------------*/
+/*alterar o nome das classes para usar as regras BEM*/
+/*this is a test o há aqui prorpiedades que podem ser alteradas mas provavelmente não é necessario :) */
+.hero {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_pr {
+  left: 1rem;
+}
+
+.btn_pr:hover{
+  color: #555;
+  
+}
+.btn_ne {
+  right: 1rem;
+}
+
+.btn_ne:hover{
+  color: #555;
+}
+
+/*vou tentar mudar esta animação*/
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.imagem_responsiva {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: none; /*block ------> none*/
+}
+
+video.displayslide {
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+img.displayslide {
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+/*---------------------------------HERO--------------------------*/
+
+.paragrafo__principal {
+  /*----Possível alteração para elementos comuns*/
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  width: 90%;
+  line-height: 1.6;
+  padding: 5px 0px 30px 80px;
+}
+
+/* --------------------- HAPPENING NOW--------------------------- */
+.happeningNow {
+  background-color: var(--cor-happNow);
+  padding: 30px 0px 0px 0px;
+}
+
+.now__title {
+  text-align: center;
+  color: var(--cor-textobotao);
+  background-color: var(--cor-now);
+  display: inline-block;
+  position: relative;
+  left: 80px;
+  width: 10%;
+  vertical-align: top;
+  margin-top: 0;
+  padding: 5px 0;
+}
+
+.now__title1 {
+  background-color: var(--cor-next);
+}
+
+.now__list {
+  display: inline-block;
+  background-color: var(--cor-bgwhite);
+  list-style: none;
+  position: relative;
+  left: 74.5px;
+  width: 70%;
+  margin: 0 0 25px 0;
+  padding: 8px 0 30px 50px;
+  line-height: 2.2;
+}
+
+/* ---------------------SECÇÃO PROGRAMA--------------------------- */
+.programa {
+  width: 100%;
+  max-width: 1024px;
+  margin: 30px auto;
+  background-color: #fff;
+}
+
+/* Header e Tabs */
+.programa__header {
+  background-color: #333;
+  font-size: 0;
+}
+
+.programa__tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.programa__tab {
+  display: inline-block;
+  width: 25%;
+  padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+}
+
+.programa__tab--active {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid var(--cor-border); /* Uma linha mais fina e mais clara */
+  border-bottom-width: 0px;
+}
+
+.programa__data {
+  font-weight: 500;
+}
+
+.programa__dia{
+  font-size: 14px;
+  color: var(--cor-dia-fundo-escuro);
+}
+
+/* Lista de Eventos */
+.programa__lista {
+  display: none; /* Java */
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  border: 1px solid var(--cor-border);
+  border-top-width: 0px;
+}
+
+.programa__lista--active {
+  display: block;
+}
+
+/* Eventos */
+.programa__evento {
+  position: relative;
+  margin-bottom: 0rem;
+  //border-bottom: 0.25px solid var(--cor-border);
+  padding: 1.5rem 10px;
+  min-height: 52px;
+}
+
+.programa__hora {
+  position: absolute;
+  left: 10px;
+  top: 16px;
+  width: 70px;
+  padding: 8px 12px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+
+.programa__info {
+  padding-left: 90px; /* Espaço para o horário */
+  padding-right: 180px; /* Espaço para a localização */
+  line-height: 1.4;
+}
+
+.programa__local {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 160px;
+  text-align: right;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Eventos Paralelos */
+.programa__sessoes {
+  padding-left: 90px; /* Mesmo espaço do .programa__info */
+  padding-right: 180px; /* Mesmo espaço do .programa__info */
+}
+
+.programa__sessao {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.programa__sessao .programa__info {
+  padding: 0; /* Remover o padding do .programa__info */
+}
+
+.programa__sessao .programa__local {
+  right: -180px; /* Posicionar o local à direita do .programa__sessao */ /*aqui*/
+}
+
+.programa__pin {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  vertical-align: middle;
+  padding-left: 0.75rem;
+}
+.programa__pin-icon {
+  width: 15px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Estado hover */
+.programa__tab:hover:not(.programa__tab--active) {
+  background-color: #444;
+}
+
+.programa__pin:hover {
+  opacity: 0.8;
+}
+/* CSS Base do Modal (versão desktop) */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal__content {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  max-height: 90vh;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow-y: auto;
+}
+
+.modal__header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.modal__title {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.modal__close {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.modal__body {
+  padding: 20px;
+}
+
+.modal__image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.modal__address-container {
+  margin-bottom: 15px;
+}
+
+.modal__address {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 10px;
+  color: #333;
+}
+
+.modal__location-pin {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.modal__location-pin img {
+  width: 20px;
+  height: auto;
+}
+
+.modal__description {
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .programa__tab {
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .programa__info {
+    padding-left: 90px;
+    padding-right: 150px;
+  }
+
+  .programa__sessoes {
+    padding-left: 90px;
+    padding-right: 150px;
+  }
+
+  .programa__hora {
+    width: 60px;
+    font-size: 12px;
+  }
+
+  .programa__local {
+    min-width: 120px;
+    font-size: 12px;
+  }
+
+  .programa__sessao .programa__local {
+    right: -150px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes de tipografia geral para mobile */
+  body {
+    font-size: 15px;
+  }
+
+  /* Parágrafo principal */
+  .paragrafo__principal-Comum {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding: 0.8rem 1.2rem 2rem 1.2rem;
+    margin: 0;
+  }
+
+  /* Títulos */
+  .titulo__principal {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .happeningNow {
+    background-color: var(--cor-happNow);
+    /*padding: 15px 0px 34px 0px;*/
+    height: 150px;
+  }
+ 
+  /* Cards */
+  .cards--section {
+    padding: 1rem 0;
+  }
+
+  .card {
+    margin-bottom: 2rem;
+  }
+
+  .card-image,
+  .card-content {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+
+  .card-image {
+    margin-bottom: 1rem;
+  }
+
+  .card-content {
+    padding: 0 1.2rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+    padding-bottom: 0.8rem;
+  }
+
+  .card-title-padding {
+    padding-bottom: 0.8rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding-bottom: 1rem;
+    margin: 0;
+  }
+
+  /* Ajustes para os botões */
+  .card__button, 
+  .card-button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    margin-right: 0.8rem;
+  }
+
+  /* Ajuste específico para o contentor dos botões */
+  .card__buttons {
+    margin-top: 0.8rem;
+  }
+
+  .card-image img{
+    margin-bottom: 0px;
+  }
+
+  /* Espaçamentos gerais */
+  .back__container {
+    margin: 1rem 1.2rem;
+  }
+
+  /* Ajuste dos ícones */
+  .MapIcon {
+    width: 24px;
+  }
+
+  .locationIcon {
+    width: 16px;
+    padding-left: 4px;
+  }
+
+  .programa {
+    position: relative;
+  }
+
+  .programa__evento {
+    position: relative;
+    background-color: #fff;
+    margin: 0 15px 15px 15px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .programa__hora {
+    display: block;
+    position: static;
+    width: auto;
+    max-width: fit-content;
+    padding: 4px 12px;
+    margin-bottom: 12px;
+    font-size: 0.9em;
+    border-radius: 3px;
+  }
+
+  .programa__info {
+    display: block;
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  .programa__local {
+    position: static;
+    display: block;
+    transform: none;
+    padding: 8px 0;
+    margin-top: 5px;
+    font-size: 0.85em;
+    color: #666;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  /* Sessões Paralelas */
+  .programa__sessoes {
+    padding: 10px 0 0 0;
+  }
+
+  .programa__sessao {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 3px;
+  }
+
+  .programa__sessao .programa__info {
+    margin-bottom: 8px;
+  }
+
+  .programa__sessao .programa__local {
+    border-top: 1px solid #eee;
+  }
+
+  /* Estilização dos ícones de localização */
+  .programa__pin {
+    margin-left: 8px;
+  }
+
+  .programa__pin-icon {
+    width: 12px;
+    height: 13px;
+    opacity: 0.7;
+  }
+
+  /* Sobreposições específicas para o modal em mobile */
+  .modal__content {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .modal__header {
+    padding: 12px;
+  }
+
+  .modal__body {
+    padding: 15px;
+  }
+
+  .modal__title {
+    font-size: 1.2em;
+    padding-right: 25px;
+  }
+
+  .modal__address {
+    display: inline;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .modal__location-pin {
+    margin-left: 5px;
+  }
+
+  .modal__location-pin img {
+    width: 18px;
+    height: 16px;
+  }
+
+  .modal__description {
+    font-size: 0.9em;
+    margin-top: 15px;
+  }
+
+  .rotas{
+    margin-bottom: 0px;
+  }
+
+  footer li {
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    padding: 15px 0 0 12px;
+  }
+
+  .footeresq {
+    width: 50%;
+  }
+
+  .logoipvfooter {
+    width: 9.4rem;
+    padding: 30px 0 0 12px;
+  }
+
+  .icons__social{
+    margin-bottom: 30px;
+    
+  }
+  .iconAlignment{             /* icones todos numa linha */
+    display: inline-block;
+    
+  }
+  .iconAlignment:first-child{
+    padding-left: 0px;
+  }
+
+  .iconAlignment img{
+    width: 1.2rem;
+  }
+  
+}
+
+/* ---------------------SECÇÃO DOS CARDS--------------------------- */
+.cards__section {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding: 0;
+  position: relative;
+}
+
+.card-principal {
+  display: inline-block;
+  width: 31%; /* reduzido para acomodar as margens */
+  vertical-align: top;
+  margin-left: 1%;
+  margin-right: 1.9%;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card__content {
+  padding: 1.5rem 0;
+}
+
+.card__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--cor-happNow);
+}
+
+.card__text {
+  padding-right: 5px;
+  margin-bottom: 1.5rem;
+  line-height: 1.9;
+  font-weight: 300; /* adicionado peso mais leve para o texto */
+}
+
+.card-principal:first-child {
+  margin-left: 0;
+}
+
+.card-principal:last-child {
+  margin-right: 0;
+}
+
+.card__buttons {
+  margin-top: 1rem;
+}
+
+.card__button {
+  display: inline-block;
+  background-color: var(--cor-happNow);
+  color: var(--cor-textobotao);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+}
+
+.card__button:last-child {
+  margin-right: 0;
+}
+
+.card__button:hover {
+  background-color: var(--cor-primaria);
+}
+
+/*========================================================================== */
+
+/* 2. Página Transportes */
+
+/*------------------------------------------SECÇÃO DOS CARDS-------------------------------------------------*/
+
+.cards--section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.card {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 4rem;
+  display: inline-block;
+}
+
+.card-image,
+.card-content {
+  display: inline-block;
+  vertical-align: middle;
+  width: 49%;
+}
+
+.card-image {
+  //box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.342);
+}
+
+.card-content {
+  padding: 0rem 0rem 0rem 3.5rem;
+}
+
+.card-title {
+  padding-bottom: 20px;
+}
+
+.card-title-padding {
+  padding-bottom: 20px;
+}
+
+.card-text {
+  padding-bottom: 20px;
+  font-weight: 300;
+}
+
+.card-button {
+  display: inline-block; /* os botões ficam na mesma linha em bloco */
+  background-color: var(--cor-happNow);
+  color: var(--cor-textobotao);
+  text-decoration: none;
+  padding: 0.3rem 1.2rem;
+  transition: background-color 0.3s; /* Adiciona transição para a cor de fundo ao passar o rato*/
+  margin-right: 1rem; /* Adiciona uma margem à direita do botão */
+}
+
+.card-button:hover {
+  background-color: var(--cor-primaria);
+}
+
+/*========================================================================== */
+
+/* 3. Página Previous Events */
+
+/*----------------------------CONTEÚDO ESPECÍFICO PÁGINA PREVIOUS ASSEMBLIES--------------------------*/
+.content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
+
+.content__left {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+  margin: 0 2.5%;
+}
+
+.content__left__paragraph {
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.content__right__paragraph {
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.content__right {
+  display: inline-block;
+  width: 44%;
+  vertical-align: top;
+  margin: 0 2.5%;
+}
+
+/*----------------------------SECÇÃO GALERIA EVENTOS ANTERIORES--------------------------*/
+.galeria__fotos {
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 80px;
+}
+
+.galeria__grupo1,
+.galeria__grupo2 {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.galeria__foto {
+  display: inline-block;
+  width: 48.7%;
+  margin-bottom: 30px;
+  margin-right: 2%;
+  text-align: left; /* Alinha à esquerda */
+}
+
+.galeria__foto figure {
+  width: 100%;
+  margin: 0;
+}
+
+.galeria__legendas {
+  margin-top: 10px;
+  text-align: left; 
+}
+
+.galeria__foto:nth-child(2n) {
+  margin-right: 0;
+}
+
+/*========================================================================== */
+
+/* 4. How To Get Here */
+
+.rotas {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.rotas__title {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.rotas__subtitle {
+  font-size: 16px;
+  margin-bottom: 24px;
+  color: #666;
+}
+
+.accordion__item {
+  margin-bottom: 8px;
+}
+
+.accordion__button {
+  width: 100%;
+  padding: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  font-family: montserrat, poppins, Arial, sans-serif; /* Adiciona esta linha */
+}
+
+.accordion__header {
+  display: inline-block;
+  width: 90%;
+  font-size: 1rem;
+}
+
+.accordion__duration {
+  display: block;
+  //font-size: 14px;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.accordion__icon {
+  display: inline-block;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.accordion__button--active .accordion__icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion__content {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+/* Estilos dos Trajetos */
+.trajeto {
+  margin-bottom: 32px;
+}
+
+.trajeto__content {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+  padding-right: 20px;
+}
+
+.trajeto__image {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}
+
+.trajeto__image img {
+  width: 100%;
+  display: block;
+}
+
+.trajeto__title {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.trajeto__subtitle {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #666;
+  font-weight: 500;
+}
+
+.trajeto__text {
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .trajeto__content,
+  .trajeto__image {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .trajeto__image {
+    margin-top: 16px;
+  }
+
+  .accordion__header {
+    width: 85%;
+  }
+  .rotas{
+    margin-bottom: 0px;
+  }
+}
+.descritivoIcon {
+  margin-bottom: 1rem;
+}
+
+.MapIcon {
+  width: 30px;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.locationIcon {
+  width: 20px;
+  vertical-align: middle;
+  padding-left: 8px;
+}
+
+/*========================================================================== */
+/* Media Queries */
+/*========================================================================== */
+
+/* 1. Página Principal */
+
+@media (max-width: 960px) {
+  .cards__section {
+    padding: 0.5rem;
+  }
+
+  .paragrafo__principal {
+    padding: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .card-principal {
+    padding: 1rem;
+    margin: 0.5rem auto 2rem auto;
+    width: calc(100% - 1rem);
+  }
+
+  .card__image {
+    width: 100%;
+    margin: 0 auto 1rem auto;
+  }
+
+  .card__content {
+    width: 100%;
+    padding: 0;
+    text-align: left;
+  }
+
+  .card__title {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .card__text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .card__button {
+    display: inline-block;
+    margin: 0.5rem 0;
+    text-align: left;
+  }
+
+  .card__button:not(:last-child) {
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .card__button:last-child {
+    margin-left: 0;
+  }
+  .sidebar {
+    display: block;
+  }
+ 
+  .menu__ul {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-principal {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+
+  .happeningNow {
+    height: 260px;
+    margin-bottom: 20px;
+  }
+
+  .now__title {
+    display: block;
+    position: static;
+    width: auto;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .now__list {
+    display: block;
+    position: static;
+    width: auto;
+    margin: 0 0 15px 0;
+    padding: 8px 25px;
+    font-size: 0.8rem;
+    line-height: 1.8;
+  }
+}
+
+/*========================================================================== */
+
+/* 3. About Viseu & Transportes */
+
+/* Layout vertical para telas menores */
+@media (max-width: 768px) {
+  .cards-section {
+    padding: 0.2rem;
+  }
+
+  .paragrafo__principal {
+    padding: 2rem;
+  }
+
+  .card {
+    padding: 1rem;
+    padding-bottom: 2rem; /* Adiciona um padding inferior de 2rem */
+    margin: 0 1rem 2rem 1rem; /*margem lateral e inferior dos cards */
+    width: calc(
+      100% - 2rem
+    ); /* Ajusta a largura dos cards considerando as margens */
+  }
+
+  .card-image {
+    width: 50%; 
+    margin: 0;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.342);
+    padding: 1rem;
+  }
+
+  .card-content {
+    width: 50%; 
+    padding: 0.5rem 1rem 1rem 1rem;
+  }
+
+  .card-button {
+    margin-bottom: 1rem;
+    display: inline-block; /* Faz o botão comportar-se como um bloco inline */
+  }
+
+  .card-button:last-child {
+    margin-right: 0; /* Remove a margem à direita do último botão */
+    margin-bottom: 1rem; /* Adiciona margem inferior ao último botão */
+  }
+}
+
+@media (max-width: 960px) {
+  .cards-section {
+    padding: 0.5rem;
+  }
+
+  .paragrafo__principal {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+  .paragrafo__principal-Comum {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+    margin: 0.5rem auto 2rem auto; /* Margens reduzidas */
+    width: calc(100% - 1rem); /* Ajusta a largura */
+  }
+
+  .card-image {
+    width: 100%;
+    margin: 0 auto; /* Centra a imagem com margem inferior */
+  }
+
+  .card-content {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .card-title {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .card-button {
+    display: inline-block; /* Garante que os botões fiquem na linha */
+    margin: 0.5rem 0;
+    text-align: left; /* Alinha os botões à esquerda */
+  }
+
+  .card-button:last-child {
+    margin-right: 0;
+  }
+
+  .card-content-padding .card-image {
+    width: 100%;
+    margin: 0;
+  }
+
+  .card-content-padding .card-content {
+    width: 100%;
+    padding: 0.5rem 1rem 1rem 1rem;
+  }
+}
+
+/*========================================================================== */
+
+/* 4. Previous Events */
+
+/*---------------------------------MEDIA QUERIES---------------------------------*/
+@media (max-width: 1000px) {
+  .galeria__fotos {
+    padding: 0;
+  }
+
+  .galeria__grupo1,
+  .galeria__grupo2 {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .galeria__foto {
+    width: 100%;
+    margin: 0 0 40px 0;
+    display: block;
+  }
+
+  .galeria__foto figure {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .galeria__legendas {
+    padding-left: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  .galeria__foto figure {
+    width: 95%;
+  }
+
+  .galeria__legendas {
+    padding-left: 0%;
+  }
+
+  .content__left {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin: 5% 2.5%;
+  }
+
+  .content__right {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin: 0 2.5%;
+  }
+}
