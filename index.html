@@ -56,8 +56,9 @@
             <img class="imagem_responsiva" src="img/mainpage/hero/Hero.png"
                 alt="imagem de herói do logo da Assembleia Geral">
 
-            <video class="imagem_responsiva" src="img/mainpage/hero/Mapa.mp4"
-                 autoplay loop></video>
+                <video class="imagem_responsiva"   autoplay loop muted poster="img/mainpage/hero/loading.png"><!--poster just might do the trick-->
+                    <source src="img/mainpage/hero/Mapa.webm">
+                </video>
 
             <img class="imagem_responsiva" src="img/mainpage/hero/wAll.png" alt="IPV welcomes all">
 
@@ -71,7 +72,7 @@
     <p class="paragrafo__principal-Comum">The General Assembly of EUNICE will gather partner universities to analyse the progress of the European University alliance and chart future developments.</p>
 
 
-    <!-- ======================================= Hapenning Now ============================================= -->
+    <!-- ======================================= Hapenning Now =================================================== -->
 
     <section id="happening-now" class="happeningNow">
         <!--Hapening now a usar ul devido a quantidades de informações penso que em java é possivel manipular a quantidade de elementos da lista-->
@@ -596,7 +597,7 @@
                 <button class="modal__close">&times;</button>
             </div>
             <div class="modal__body">
-                <img class="modal__image" src="img/placeholder.png"  alt="Imagem do local"> <!--o source tá como placeholder para evitar erro de validação-->
+                <!--<img class="modal__image" src="img/placeholder.png"  alt="Imagem do local"> o source tá como placeholder para evitar erro de validação-->
                 <div class="modal__address-container">
                     <p class="modal__address"></p>
                     <a class="modal__location-pin" href="#" target="_blank">

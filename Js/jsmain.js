@@ -7,6 +7,51 @@ backToTop();
 
 
 
+
+// Função para tornar o menu sticky
+window.onscroll = function () { //evento que é ativado sempre que fazemos scroll na página
+
+  // Seleciona o elemento do menu
+  var menu = document.querySelector('.menu');
+
+  var footer = document.querySelector('.footer');
+
+  //posição original do menu
+  var posicaoInicial = menu.offsetTop; //distância inicial do menu ao topo da página
+
+  // Se passar do limite do footer, volta ao normal
+  if (window.scrollY + window.innerHeight > footer.offsetTop) {
+    menu.style.position = 'relative';
+    menu.style.maxWidth = '100%';
+    document.body.style.paddingTop = '0';
+
+  }
+
+
+  // Se o scroll passou da posição inicial do menu
+  if (window.scrollY > posicaoInicial) {
+    // Fixa o menu no topo
+    menu.style.position = 'fixed';
+    menu.style.top = '0';
+    menu.style.left = '0';
+    menu.style.right = '0';
+    menu.style.maxWidth = '64rem';  // Mantém largura máxima do site
+    menu.style.margin = '0 auto';   // Centra o menu
+    menu.style.zIndex = '1000';     // fica por cima de outros elementos
+    // Adiciona espaço ao bocy para compensar o menu fixo
+    document.body.style.paddingTop = '3.5rem';
+  } else {
+    // Volta o menu à posição normal
+    menu.style.position = 'relative';
+    //menu.style.maxWidth = '100%';
+    menu.style.left = 'auto';
+    menu.style.right = 'auto';
+    // Remove o espaço extra
+    document.body.style.paddingTop = '0';
+  }
+};
+
+
 //-----------------------------HERO----------------------------//
 //hero v0.1 (update this for next commit)
 var slideindex = 0;
@@ -150,7 +195,7 @@ function checktime() {
     diaAtual = "0";
     
   }
-  else if (monthnow == 0 && daynow == 23) {
+  else if (monthnow == 1 && daynow == 19) {
     dia1();
     diaAtual = "1";
 
