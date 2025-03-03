@@ -195,7 +195,7 @@ function checktime() {
     diaAtual = "0";
     
   }
-  else if (monthnow == 1 && daynow == 19) {
+  else if (monthnow == 1 && daynow == 26) {
     dia1();
     diaAtual = "1";
 
