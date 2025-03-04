@@ -34,7 +34,7 @@
 /* 2. Estilos Base */
 body,
 html {
-  font-family: montserrat, poppins, Arial, sans-serif;
+  font-family: 'Montserrat', 'Poppins', 'Arial', sans-serif;
   line-height: 1.6;
   color: var(--cor-primaria);
   max-width: 100%;
@@ -307,6 +307,7 @@ footer a:hover {
   padding-left: 15px;
 }
 
+
 .iconAlignment {
   /* icones todos numa linha */
   display: inline-block;
@@ -314,7 +315,7 @@ footer a:hover {
 }
 
 .iconAlignment img {
-  width: 28px;
+  width: 24px;
 }
 
 .developed {
@@ -508,8 +509,8 @@ img.displayslide {
 .programa__evento {
   position: relative;
   margin-bottom: 0rem;
-  //border-bottom: 0.25px solid var(--cor-border); /*comentário professor*/
-  padding: 1.5rem 10px;
+  /* border-bottom: 0.25px solid var(--cor-border); comentário professor*/
+  padding: 1.5rem 0px;
   min-height: 52px;
 }
 
@@ -1376,12 +1377,13 @@ img.displayslide {
 
   .programa__evento {
     position: relative;
-    background-color: #fff;
-    margin: 0 15px 15px 15px;
-    padding: 15px;
-    border: 1px solid #eee;
+    /*background-color: #fff;*/
+    /*margin: 0 15px 15px 15px;*/
+    /*padding: 15px;*/
+    padding: 1rem 0;
+    /*border: 1px solid #eee;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);*/
   }
 
   .programa__hora {
@@ -1508,6 +1510,7 @@ img.displayslide {
 
   .icons__social {
     margin-bottom: 30px;
+
   }
   .iconAlignment {
     /* icones todos numa linha */
