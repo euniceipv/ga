@@ -18,8 +18,8 @@
   box-sizing: border-box;
   --cor-primaria: #000000;
   --cor-happNow: #313131;
-  --cor-next: #7aa42d;
-  --cor-now: #d02e2e;
+  --cor-next: #febf33;
+  --cor-now: #7aa42d;
   --cor-textobotao: #ffffff;
   --cor-bgwhite: #ffffff;
   --cor-logoEunice: #1d1d1b;
@@ -415,7 +415,7 @@ img.displayslide {
 
 .now__title {
   text-align: center;
-  color: var(--cor-textobotao);
+  color: var(--cor-textobotao);  /*--cor-textobotao fix this*/ 
   background-color: var(--cor-now);
   display: inline-block;
   position: relative;
