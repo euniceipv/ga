@@ -34,7 +34,7 @@
 /* 2. Estilos Base */
 body,
 html {
-  font-family: montserrat, poppins, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   color: var(--cor-primaria);
   max-width: 100%;
