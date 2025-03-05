@@ -29,6 +29,10 @@
   --cor-links: #0066a8;
   --cor-border: #ecebeb;
   --cor-dia-fundo-escuro: #888;
+
+  --lateral-margin: 15px;
+
+  --peso-titulo:700;
 }
 
 /* 2. Estilos Base */
@@ -206,7 +210,7 @@ a {
 
 .back__container {
   width: 100%;
-  margin-top: 2rem;
+  /*margin: 2rem var(--lateral-margin);*/
 }
 
 .fa-arrow-left {
@@ -218,7 +222,10 @@ a {
 .titulo__principal {
   display: inline-block;
   font-size: 2rem;
-  padding: 0px 13px;
+  /*padding: 0px 13px;*/
+  margin-top: 1.5rem;
+  /*margin-right: var(--lateral-margin);
+  margin-left: var(--lateral-margin);*/
 }
 
 /*----------------------------PARÁGRAFO PRINCIPAL--------------------------*/
@@ -790,7 +797,7 @@ img.displayslide {
 }
 
 .card-image {
-  //box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.342);
+  /* box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.342); */
 }
 
 .card-content {
@@ -910,10 +917,11 @@ img.displayslide {
 /* 4. How To Get Here */
 
 .rotas {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 20px;
-  margin-bottom: 40px;
+  /*max-width: 1024px;*/
+  margin: 1.5rem 0 4rem 0;
+  /*margin: 0 0;*/
+  /*padding: 4rem;*/
+
 }
 
 .rotas__title {
@@ -1062,10 +1070,6 @@ img.displayslide {
     padding-left: 1rem;
   }
 
-  .cards__section {
-    padding: 0.5rem;
-  }
-
   .paragrafo__principal {
     padding: 1.5rem;
     font-size: 0.8rem;
@@ -1159,9 +1163,6 @@ img.displayslide {
 
 /* Layout vertical para telas menores */
 @media (max-width: 768px) {
-  .cards-section {
-    padding: 0.2rem;
-  }
 
   .paragrafo__principal {
     padding: 2rem;
@@ -1200,12 +1201,15 @@ img.displayslide {
 }
 
 @media (max-width: 960px) {
-  .back__container {
-    margin: 16px;
-  }
+  /*.back__container {
+    margin:1.2rem;
+    margin-right: var(--lateral-margin);
+    margin-left: var(--lateral-margin);
+  } */
 
   .cards-section {
-    padding: 0.5rem;
+    /*padding-left: var(--lateral-margin);
+    padding-right: var(--lateral-margin);*/
   }
 
   .paragrafo__principal {
@@ -1213,7 +1217,7 @@ img.displayslide {
     font-size: 1rem;
   }
   .paragrafo__principal-Comum {
-    padding: 1.5rem;
+    padding: 1.5rem 15px;
     font-size: 1rem;
   }
 
@@ -1271,9 +1275,17 @@ img.displayslide {
 /* 4. Previous Events */
 
 /*---------------------------------MEDIA QUERIES---------------------------------*/
-@media (max-width: 1000px) {
+@media (max-width: 1092px) {
   .back__container {
-    margin: 16px;
+    margin:1.2 rem;
+    margin-right: var(--lateral-margin);
+    margin-left: var(--lateral-margin);
+  }
+
+  .rotas {
+    margin-left: var(--lateral-margin);
+    margin-right: var(--lateral-margin);
+    padding: 0;
   }
 
   .galeria__fotos {
@@ -1303,9 +1315,9 @@ img.displayslide {
 }
 
 @media (max-width: 768px) {
-  .back__container {
+  /*.back__container {
     margin: 16px;
-  }
+  }*/
   .galeria__foto figure {
     width: 95%;
   }
@@ -1334,12 +1346,13 @@ img.displayslide {
   .paragrafo__principal-Comum {
     font-size: 0.9rem;
     line-height: 1.7;
-    padding: 0.8rem 1.2rem 2rem 1.2rem;
+    padding: 0.8rem 15px 2rem 15px;
     margin: 0;
   }
 
   .titulo__principal {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: var(--peso-titulo) !important; 
     margin-bottom: 0.5rem;
     vertical-align: middle;
     padding-left: 0;
@@ -1353,13 +1366,16 @@ img.displayslide {
 
   /* Espaçamentos gerais */
   .back__container {
-    margin: 1rem 1.2rem;
+    /*margin: 1rem 1.2rem;
+    margin:1.2rem;
+    margin-right: var(--lateral-margin);
+    margin-left: var(--lateral-margin);*/
   }
 
-  .fa-arrow-left {
+  /*.fa-arrow-left {
     font-size: 1.2rem;
     margin-right: 0.5rem;
-  }
+  }*/
 
   /* Ajuste dos ícones */
   .MapIcon {
@@ -1524,11 +1540,6 @@ img.displayslide {
     width: 1.2rem;
   }
 
-  /* Cards para todas as páginas */
-  .cards-section {
-    padding: 0.2rem;
-  }
-
   .card {
     width: calc(100% - 2.4rem);
     margin-left: 1.2rem;
@@ -1567,13 +1578,11 @@ img.displayslide {
   }
 
   /* Específico para página travel */
-  .rotas .card {
-    width: calc(100% - 2.4rem); /* Uniformiza com os outros cards */
-    margin-left: 1.2rem;
-    margin-right: 1.2rem;
+  /*.rotas .card {
+    width: calc(100% - 2.4rem); 
     margin-bottom: 2rem;
     padding: 0;
-  }
+  } */
 
   /* Ajusta a galeria de fotos para largura uniforme */
   .galeria__foto figure {
