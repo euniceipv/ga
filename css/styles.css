@@ -29,6 +29,7 @@
   --cor-links: #0066a8;
   --cor-border: #ecebeb;
   --cor-dia-fundo-escuro: #888;
+  --cor-grey-text:#888;
 
   --lateral-margin: 15px;
 
@@ -47,6 +48,10 @@ html {
 
 a {
   color: var(--cor-links);
+}
+
+.greyed {
+  color: var(--cor-grey-text);
 }
 
 /* 3. Layout Principal */
@@ -517,7 +522,7 @@ img.displayslide {
   position: relative;
   margin-bottom: 0rem;
   /* border-bottom: 0.25px solid var(--cor-border); comentário professor*/
-  padding: 1.5rem 0px;
+  padding: 1.5rem 0 0 0;
   min-height: 52px;
 }
 
@@ -553,12 +558,12 @@ img.displayslide {
 /* Eventos Paralelos */
 .programa__sessoes {
   padding-left: 90px; /* Mesmo espaço do .programa__info */
-  padding-right: 180px; /* Mesmo espaço do .programa__info */
+  padding-right: 190px; /* Mesmo espaço do .programa__info */
 }
 
 .programa__sessao {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 0.5rem;
 }
 
 .programa__sessao .programa__info {
@@ -690,7 +695,7 @@ img.displayslide {
 
   .programa__sessoes {
     padding-left: 90px;
-    padding-right: 150px;
+    padding-right: 160px;
   }
 
   .programa__hora {
@@ -1422,6 +1427,10 @@ img.displayslide {
     color: #333;
   }
 
+  .programa__evento > .programa__local {
+      padding-right: 10px;
+      /* border-top: 1px solid #f0f0f0; */
+  }
   .programa__local {
     position: static;
     display: block;
