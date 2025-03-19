@@ -491,13 +491,13 @@ function temponaconsola() {
   }
 
   // Event Listeners para os pinos de localização
-  document.querySelectorAll('.programa__pin').forEach(pin => {
+  /*document.querySelectorAll('.programa__pin').forEach(pin => {
     pin.addEventListener('click', function (e) {
       e.preventDefault();
       const locationName = this.parentNode.textContent.trim().replace('📍', '').trim();
       openLocationModal(locationName);
     });
-  });
+  });*/
 
   // Fechar modal
   modalClose.addEventListener('click', () => {
