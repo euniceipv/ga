@@ -237,8 +237,21 @@ a {
 
 .paragrafo__principal-Comum {
   font-size: 1.1rem;
-  padding: 0.31rem 2.5rem 3.13rem 2.7rem;
+  /*padding: 0.31rem 2.5rem 3.13rem 2.7rem;*/
+  padding: 0.33rem 0 3.13rem 0rem;
   line-height: 1.8;
+}
+
+.paragrafo-heroi{
+  padding-bottom: 2rem !important;
+  padding-left: calc(1rem + 15px) !important;
+  padding-right: calc(1rem + 15px) !important;
+}
+@media (min-width: 961px) {
+  .paragrafo-heroi{
+     padding-left: 2.5rem !important;
+     padding-right: 2.5rem !important;
+  }
 }
 
 #back-to-top {
@@ -740,10 +753,8 @@ img.displayslide {
 }
 
 .card__text {
-  padding-right: 5px;
-  margin-bottom: 1.5rem;
+  /*padding-right: 5px;*/
   line-height: 1.9;
-  font-weight: 300; /* adicionado peso mais leve para o texto */
 }
 
 .card-principal:first-child {
@@ -755,7 +766,7 @@ img.displayslide {
 }
 
 .card__buttons {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .card__button {
@@ -764,7 +775,7 @@ img.displayslide {
   color: var(--cor-textobotao);
   text-decoration: none;
   padding: 0.5rem 1rem;
-  margin-right: 1rem;
+  margin: 0rem 0.15rem 0.15rem 0rem;
 }
 
 .card__button:last-child {
@@ -790,7 +801,8 @@ img.displayslide {
 .card {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   display: inline-block;
 }
 
@@ -817,7 +829,7 @@ img.displayslide {
   padding-bottom: 10px;
 }
 
-.card-text {
+.card-text, .card__text {
   padding-bottom: 20px;
   font-weight: 300;
 }
@@ -923,7 +935,7 @@ img.displayslide {
 
 .rotas {
   /*max-width: 1024px;*/
-  margin: 1.5rem 0 4rem 0;
+  margin: 1.5rem 0 2rem 0;
   /*margin: 0 0;*/
   /*padding: 4rem;*/
 
@@ -1045,7 +1057,7 @@ img.displayslide {
     width: 85%;
   }
   .rotas {
-    margin-bottom: 0px;
+    /*margin-bottom: 0px;*/
   }
 }
 .descritivoIcon {
@@ -1097,9 +1109,10 @@ img.displayslide {
     text-align: left;
   }
 
-  .card__title {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+  .card-title, .card__title {
+    margin-top: 0.75rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0.25rem;
     font-size: 1.25rem;
   }
 
@@ -1108,10 +1121,24 @@ img.displayslide {
     line-height: 1.8;
   }
 
+  .card-text, .card__text {
+    padding-bottom: 0.5rem;
+  }
+
   .card__button {
     display: inline-block;
     margin: 0.5rem 0;
     text-align: left;
+  }
+
+
+  #cards-section-home .card-principal {
+    margin-bottom: 0;
+  }
+
+  #cards-section-home .card__buttons {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .card__button:not(:last-child) {
@@ -1174,12 +1201,12 @@ img.displayslide {
   }
 
   .card {
-    padding: 1rem;
-    padding-bottom: 2rem; /* Adiciona um padding inferior de 2rem */
-    margin: 0 1rem 2rem 1rem; /*margem lateral e inferior dos cards */
+    /*padding: 1rem;
+    padding-bottom: 2rem;
+    margin: 0 1rem 2rem 1rem; 
     width: calc(
       100% - 2rem
-    ); /* Ajusta a largura dos cards considerando as margens */
+    );*/
   }
 
   .card-image {
@@ -1221,15 +1248,11 @@ img.displayslide {
     padding: 1.5rem;
     font-size: 1rem;
   }
-  .paragrafo__principal-Comum {
-    padding: 1.5rem 15px;
-    font-size: 1rem;
-  }
 
   .card {
-    padding: 1rem;
-    margin: 0.5rem auto 2rem auto; /* Margens reduzidas */
-    width: calc(100% - 1rem); /* Ajusta a largura */
+    /*padding: 1rem;
+    margin: 0.5rem auto 2rem auto; 
+    width: calc(100% - 1rem); */
   }
 
   .card-image {
@@ -1244,14 +1267,12 @@ img.displayslide {
   }
 
   .card-title {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
     font-size: 1.25rem;
   }
 
   .card-text {
     font-size: 1rem;
-    line-height: 1.4;
+    /*line-height: 1.4;*/
   }
 
   .card-button {
@@ -1281,6 +1302,11 @@ img.displayslide {
 
 /*---------------------------------MEDIA QUERIES---------------------------------*/
 @media (max-width: 1092px) {
+ .paragrafo__principal-Comum {
+    padding: 1.5rem 15px;
+    font-size: 1rem;
+  }
+
   .back__container {
     margin:1.2 rem;
     margin-right: var(--lateral-margin);
@@ -1292,6 +1318,23 @@ img.displayslide {
     margin-right: var(--lateral-margin);
     padding: 0;
   }
+
+
+  .cards__section { /* home */
+    margin-left: var(--lateral-margin);
+    margin-right: var(--lateral-margin);
+  }
+
+  .cards-section { /* travel */
+    margin-left: var(--lateral-margin);
+    margin-right: var(--lateral-margin);
+  }
+
+  .cards-section-viseu { /* viseu */
+    margin-left: var(--lateral-margin);
+    margin-right: var(--lateral-margin);
+  }
+
 
   .galeria__fotos {
     padding: 0;
@@ -1559,10 +1602,10 @@ img.displayslide {
   }
 
   .card {
-    width: calc(100% - 2.4rem);
+    /*width: calc(100% - 2.4rem);
     margin-left: 1.2rem;
     margin-right: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;*/
     padding: 0;
   }
 
@@ -1576,17 +1619,10 @@ img.displayslide {
 
   .card-text, .card__text {
     line-height: 1.7;
-    font-size: 14px;
+    /*font-size: 14px;*/
   }
 
   
-
-  .card-title, .card__title {
-    margin-top: 10px;
-    margin-bottom: 0;
-    padding-bottom: 10px;
-  }
-
   .rotas {
     padding-top: 0;
   }
