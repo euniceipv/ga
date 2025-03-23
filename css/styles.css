@@ -1421,7 +1421,7 @@ img.displayslide {
   .programa__info {
     display: block;
     padding: 0;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     font-size: 0.95em;
     line-height: 1.5;
     color: #333;
@@ -1431,15 +1431,21 @@ img.displayslide {
       padding-right: 10px;
       /* border-top: 1px solid #f0f0f0; */
   }
+
+  .programa__evento a {
+      text-decoration: none;
+  }
+
   .programa__local {
+    text-align: left;
     position: static;
     display: block;
     transform: none;
-    padding: 8px 0;
-    margin-top: 5px;
+    /*padding: 8px 0;
+    margin-top: 5px;*/
     font-size: 0.85em;
     color: #666;
-    border-top: 1px solid #f0f0f0;
+    /*border-top: 1px solid #f0f0f0*/;
   }
 
   /* Sessões Paralelas */
@@ -1455,16 +1461,19 @@ img.displayslide {
   }
 
   .programa__sessao .programa__info {
-    margin-bottom: 8px;
+    /*margin-bottom: 8px;*/
   }
 
   .programa__sessao .programa__local {
-    border-top: 1px solid #eee;
+    /*border-top: 1px solid #eee*/;
   }
 
   /* Estilização dos ícones de localização */
   .programa__pin {
-    margin-left: 8px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+
+    /*margin-left: 8px;*/
   }
 
   .programa__pin-icon {
