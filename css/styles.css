@@ -46,6 +46,10 @@ html {
   overflow-x: hidden;
 }
 
+#programme, .programa {
+  scroll-margin-top: 75px;
+}
+
 a {
   color: var(--cor-links);
 }

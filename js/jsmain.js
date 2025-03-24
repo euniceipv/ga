@@ -53,8 +53,8 @@ window.onscroll = function () { //evento que é ativado sempre que fazemos scrol
   }
 };
 
-
 //-----------------------------HERO----------------------------//
+
 //hero v0.1 (update this for next commit)
 var slideindex = 0;
 
@@ -90,10 +90,10 @@ function nextslide() {
   showSlide(slideindex);
   console.log(slideindex);
 }
+
 //--------------------------------------END OF HERO--------------------------//
 
 //-------------------------------------DAY-------------------------------------//
-
 
 var diaAtual;                //para criar relação com o dia que estiver aberto (mudarDia())
 function checktime() {
@@ -123,7 +123,6 @@ function checktime() {
 //----------------------------END OF DAY-----------------------------------//
 
 //----------------------------PROGRAM---------------------------------------------//
-
 
   // Elementos do DOM
   const tabs = document.querySelectorAll('.programa__tab');
@@ -155,15 +154,15 @@ function checktime() {
     });
   });
 
-
 //----------------------------END OF PROGRAM------------------------------------------//
 
 //----------------------------BACK TO TOP---------------------------------------------//
+  
 function backToTop()
 {
 const backToTopButton = document.getElementById('back-to-top');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 500) {
+  if (window.scrollY > 100) {
     backToTopButton.style.display = 'block';
   } else {
     backToTopButton.style.display = 'none';
@@ -220,3 +219,5 @@ function acordion()
 }
 
 //----------------------------END MENUS ACORDION PÁGINA HTGH------------------------------------------//
+
+
