@@ -723,6 +723,10 @@ img.displayslide {
 
 /* Responsividade */
 @media (max-width: 768px) {
+
+  .logo-bar.logo-bar-previous {
+    margin-bottom: 1rem;
+  }
   .programa__tab {
     padding: 8px 0;
     font-size: 14px;
