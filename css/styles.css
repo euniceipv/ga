@@ -258,6 +258,29 @@ a {
   }
 }
 
+.thankyou {
+  font-size: 1.15rem;
+  font-weight: var(--peso-titulo);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.logo-section {
+  margin: 2rem 2rem 4rem 2rem; 
+}
+
+.logo-bar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.logo-bar.logo-bar-previous {
+  width: 90%;
+}
+
 #back-to-top {
   position: fixed;
   bottom: 20px;
@@ -1087,6 +1110,12 @@ img.displayslide {
 /* 1. Página Principal */
 
 @media (max-width: 960px) {
+
+  .logo-section {
+    margin-left: calc( var(--lateral-margin) + 1rem) !important;
+    margin-right: calc( var(--lateral-margin) + 1rem) !important;
+  }
+
   .botoes_assembleias_anteriores {
     padding-left: 1rem;
   }
@@ -1315,6 +1344,16 @@ img.displayslide {
     margin:1.2 rem;
     margin-right: var(--lateral-margin);
     margin-left: var(--lateral-margin);
+  }
+
+  .logo-section {
+    margin-top: 2rem;
+    margin-right: var(--lateral-margin);
+    margin-left: var(--lateral-margin);
+    margin-bottom: 3rem;
+  }
+  .logo-bar {
+    width: 100%;
   }
 
   .rotas {
